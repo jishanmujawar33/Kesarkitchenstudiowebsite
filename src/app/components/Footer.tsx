@@ -13,7 +13,7 @@ export function Footer() {
             </div>
             <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, fontSize: "0.75rem", color: "#7A6854", marginBottom: "4px" }}>केसर किचन स्टूडियो</p>
             <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, fontSize: "0.82rem", color: "#5A4A3A", lineHeight: 1.7, marginTop: "10px" }}>
-              Premium SS kitchens, safety doors &amp; wardrobes.<br />Vasai West, Maharashtra.
+              Shop No.7, Pushkar Apt Near Babola Chowki,<br />Opp. D-Mart, Vasai West Palghar 401202
             </p>
             <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 400, fontSize: "0.8rem", color: "#C8860A", marginTop: "8px" }}>Ketan Desai · Craft Director</p>
             <div className="flex gap-3 mt-6">
@@ -38,7 +38,7 @@ export function Footer() {
             },
             {
               title: "Company",
-              links: ["About Ketan Desai", "Our Process", "Photo Gallery", "Client Stories", "Contact Us"],
+              links: ["About Ketan Desai", "Our Process", "Photo Gallery", "Client Stories", "Contact Us", "Find Us"],
             },
             {
               title: "Service Areas",
@@ -65,7 +65,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="pt-8 border-t flex flex-col md:flex-row justify-between gap-4" style={{ borderColor: "rgba(247,243,237,0.08)" }}>
           <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, fontSize: "0.8rem", color: "#5A4A3A" }}>
-            © 2026 Kesar Kitchen Studio · Vasai West, Palghar. All rights reserved.
+            © 2026 Kesar Kitchen Studio · Shop No.7, Pushkar Apt, Vasai West, Palghar 401202. All rights reserved.
           </p>
           <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, fontSize: "0.8rem", color: "#5A4A3A" }}>
             Crafted by Ketan Desai &amp; team.

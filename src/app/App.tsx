@@ -8,7 +8,9 @@ import { WhyUs } from "./components/WhyUs";
 import { Process } from "./components/Process";
 import { Testimonials } from "./components/Testimonials";
 import { Contact } from "./components/Contact";
+import { LocationMap } from "./components/LocationMap";
 import { Footer } from "./components/Footer";
+import { FloatingButtons } from "./components/FloatingButtons";
 
 export default function App() {
   return (
@@ -22,7 +24,9 @@ export default function App() {
       <Process />
       <Testimonials />
       <Contact />
+      <LocationMap />
       <Footer />
+      <FloatingButtons />
     </div>
   );
 }

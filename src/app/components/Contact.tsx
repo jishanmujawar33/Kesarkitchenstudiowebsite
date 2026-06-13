@@ -1,6 +1,11 @@
 import { useState } from "react";
 import { MapPin, Phone, Mail, CheckCircle, MessageCircle } from "lucide-react";
 
+const OWNER_PHONE = "919549016045";
+const WHATSAPP_MESSAGE = encodeURIComponent(
+  `Hi Ketan sir,\n\nI'm interested in Kesar Kitchen Studio's products and would like to enquire about:\n\n☐ SS Modular Kitchen\n☐ Heavy S.S. Safety Door\n☐ Designer Wardrobe\n☐ SS Solid Furniture\n\nPlease share more details and arrange a free site visit.\n\nThank you!`
+);
+
 export function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const [form, setForm] = useState({ name: "", phone: "", area: "", type: "", message: "" });
@@ -27,17 +32,21 @@ export function Contact() {
 
           <div className="flex flex-col gap-6">
             {[
-              { icon: MapPin, label: "Studio & Workshop", value: "Vasai West, Palghar District, Maharashtra" },
-              { icon: Phone, label: "Call Ketan Desai", value: "+91 98XXX XXXXX" },
+              { icon: MapPin, label: "Studio & Workshop", value: "Shop No.7, Pushkar Apt Near Babola Chowki, Opp. D-Mart, Vasai West Palghar 401202" },
+              { icon: Phone, label: "Call Ketan Desai", value: "+91 95490 16045", href: "tel:+919549016045" },
               { icon: Mail, label: "Email Us", value: "ketan@kesarkitchenstudio.in" },
-            ].map(({ icon: Icon, label, value }) => (
+            ].map(({ icon: Icon, label, value, href }) => (
               <div key={label} className="flex gap-4 items-start">
                 <div className="w-10 h-10 flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background: "#C8860A" }}>
                   <Icon size={16} color="#FBF8F4" />
                 </div>
                 <div>
                   <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, fontSize: "0.7rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "#7A6854" }}>{label}</p>
-                  <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 400, fontSize: "0.9rem", color: "#1C1410", marginTop: "2px" }}>{value}</p>
+                  {href ? (
+                    <a href={href} style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 400, fontSize: "0.9rem", color: "#1C1410", marginTop: "2px", display: "block", textDecoration: "none" }}>{value}</a>
+                  ) : (
+                    <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 400, fontSize: "0.9rem", color: "#1C1410", marginTop: "2px" }}>{value}</p>
+                  )}
                 </div>
               </div>
             ))}
@@ -45,7 +54,7 @@ export function Contact() {
 
           {/* WhatsApp CTA */}
           <a
-            href="https://wa.me/91XXXXXXXXXX"
+            href={`https://wa.me/${OWNER_PHONE}?text=${WHATSAPP_MESSAGE}`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 mt-8 px-6 py-3 transition-all duration-200 hover:bg-[#1a8a3c]"
