@@ -7,6 +7,7 @@ import { Gallery } from "./components/Gallery";
 import { WhyUs } from "./components/WhyUs";
 import { Process } from "./components/Process";
 import { Testimonials } from "./components/Testimonials";
+import { Instagram } from "./components/Instagram";
 import { Contact } from "./components/Contact";
 import { LocationMap } from "./components/LocationMap";
 import { Footer } from "./components/Footer";
@@ -23,6 +24,7 @@ export default function App() {
       <WhyUs />
       <Process />
       <Testimonials />
+      <Instagram />
       <Contact />
       <LocationMap />
       <Footer />

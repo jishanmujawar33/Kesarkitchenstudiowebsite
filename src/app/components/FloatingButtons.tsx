@@ -4,7 +4,7 @@ import { MessageCircle, Phone, X } from "lucide-react";
 const OWNER_PHONE = "919549016045";
 const DISPLAY_PHONE = "+91 95490 16045";
 const WHATSAPP_MESSAGE = encodeURIComponent(
-  `Hi Ketan sir,\n\nI'm interested in Kesar Kitchen Studio's products and would like to enquire about:\n\n☐ SS Modular Kitchen\n☐ Heavy S.S. Safety Door\n☐ Designer Wardrobe\n☐ SS Solid Furniture\n\nPlease share more details and arrange a free site visit.\n\nThank you!`
+  `Hi Ketan sir,\n\nI'm interested in Kesar Kitchen Studio's products and would like to enquire about:\n\n☐ SS Modular Kitchen\n☐ Heavy S.S. Safety Door\n☐ Designer Wardrobe\n\nPlease share more details and arrange a free site visit.\n\nThank you!`
 );
 
 export function FloatingButtons() {

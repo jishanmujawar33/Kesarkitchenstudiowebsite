@@ -17,10 +17,16 @@ export function Footer() {
             </p>
             <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 400, fontSize: "0.8rem", color: "#C8860A", marginTop: "8px" }}>Ketan Desai · Craft Director</p>
             <div className="flex gap-3 mt-6">
-              {[Instagram, Facebook, Youtube].map((Icon, i) => (
+              {[
+                { Icon: Instagram, href: "https://www.instagram.com/kesar_kitchen_studio1?igsh=MWhvdWx6c2puZ2c4NA==" },
+                { Icon: Facebook, href: "#" },
+                { Icon: Youtube, href: "#" }
+              ].map(({ Icon, href }, i) => (
                 <a
                   key={i}
-                  href="#"
+                  href={href}
+                  target={href !== "#" ? "_blank" : undefined}
+                  rel={href !== "#" ? "noopener noreferrer" : undefined}
                   className="w-8 h-8 flex items-center justify-center border transition-all duration-150 hover:border-[#C8860A] hover:text-[#C8860A]"
                   style={{ borderColor: "rgba(247,243,237,0.15)", color: "#7A6854" }}
                 >
