@@ -62,36 +62,38 @@ export function Testimonials() {
             "{t.quote}"
           </blockquote>
 
-          {/* Attribution */}
-          <div className="flex items-center gap-4">
-            <div
-              className="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0"
-              style={{ background: "#C8860A" }}
-            >
-              <span style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 500, fontSize: "0.75rem", color: "#FBF8F4" }}>{t.avatar}</span>
+          {/* Attribution and Nav */}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mt-8">
+            <div className="flex items-center gap-4">
+              <div
+                className="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0"
+                style={{ background: "#C8860A" }}
+              >
+                <span style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 500, fontSize: "0.75rem", color: "#FBF8F4" }}>{t.avatar}</span>
+              </div>
+              <div>
+                <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 500, fontSize: "0.9rem", color: "#1C1410" }}>{t.name}</p>
+                <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, fontSize: "0.78rem", color: "#7A6854" }}>{t.city} · {t.kitchen}</p>
+              </div>
             </div>
-            <div>
-              <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 500, fontSize: "0.9rem", color: "#1C1410" }}>{t.name}</p>
-              <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, fontSize: "0.78rem", color: "#7A6854" }}>{t.city} · {t.kitchen}</p>
-            </div>
-          </div>
 
-          {/* Nav */}
-          <div className="absolute bottom-10 right-10 flex gap-2">
-            <button
-              onClick={() => setIdx((idx - 1 + testimonials.length) % testimonials.length)}
-              className="w-9 h-9 flex items-center justify-center border transition-all duration-150 hover:bg-[#2C1A0E] hover:border-[#2C1A0E] group"
-              style={{ borderColor: "#2C1A0E" }}
-            >
-              <ChevronLeft size={15} color="#2C1A0E" className="group-hover:!text-white" style={{ color: "#2C1A0E" }} />
-            </button>
-            <button
-              onClick={() => setIdx((idx + 1) % testimonials.length)}
-              className="w-9 h-9 flex items-center justify-center border transition-all duration-150 hover:bg-[#2C1A0E] hover:border-[#2C1A0E] group"
-              style={{ borderColor: "#2C1A0E" }}
-            >
-              <ChevronRight size={15} color="#2C1A0E" className="group-hover:!text-white" style={{ color: "#2C1A0E" }} />
-            </button>
+            {/* Nav */}
+            <div className="flex gap-2">
+              <button
+                onClick={() => setIdx((idx - 1 + testimonials.length) % testimonials.length)}
+                className="w-9 h-9 flex items-center justify-center border transition-all duration-150 hover:bg-[#2C1A0E] hover:border-[#2C1A0E] group"
+                style={{ borderColor: "#2C1A0E" }}
+              >
+                <ChevronLeft size={15} color="#2C1A0E" className="group-hover:!text-white" style={{ color: "#2C1A0E" }} />
+              </button>
+              <button
+                onClick={() => setIdx((idx + 1) % testimonials.length)}
+                className="w-9 h-9 flex items-center justify-center border transition-all duration-150 hover:bg-[#2C1A0E] hover:border-[#2C1A0E] group"
+                style={{ borderColor: "#2C1A0E" }}
+              >
+                <ChevronRight size={15} color="#2C1A0E" className="group-hover:!text-white" style={{ color: "#2C1A0E" }} />
+              </button>
+            </div>
           </div>
         </div>
 

@@ -2,7 +2,7 @@ import { ArrowDown } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative w-full h-screen min-h-[640px] overflow-hidden bg-[#2C1A0E]">
+    <section className="relative w-full min-h-screen md:h-screen flex items-center overflow-hidden bg-[#2C1A0E] py-24 md:py-0">
       {/* Background image */}
       <img
         src="https://images.unsplash.com/photo-1628745277862-bc0b2d68c50c?w=1800&h=1200&fit=crop&auto=format"
@@ -14,7 +14,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-gradient-to-r from-[#1C1410]/80 via-[#1C1410]/40 to-transparent" />
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 h-full flex flex-col justify-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 w-full flex flex-col justify-center">
         <div className="max-w-2xl">
           <p
             className="mb-5"
@@ -55,7 +55,7 @@ export function Hero() {
         </div>
 
         {/* Stats row */}
-        <div className="absolute bottom-12 left-6 lg:left-10 right-6 lg:right-10 flex gap-10 flex-wrap">
+        <div className="mt-16 md:mt-0 md:absolute md:bottom-12 md:left-6 lg:md:left-10 md:right-6 lg:md:right-10 flex gap-6 md:gap-10 flex-wrap">
           {[
             { n: "100%", label: "Rust-proof stainless steel" },
             { n: "500+", label: "Kitchens delivered" },

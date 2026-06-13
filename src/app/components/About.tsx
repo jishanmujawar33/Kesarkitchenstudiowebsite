@@ -10,11 +10,11 @@ export function About() {
             className="w-full h-[500px] object-cover"
           />
           <div
-            className="absolute -bottom-6 -right-6 w-44 h-44 flex flex-col items-center justify-center text-center p-3"
+            className="absolute bottom-0 right-0 sm:-bottom-6 sm:-right-6 w-36 h-36 sm:w-44 sm:h-44 flex flex-col items-center justify-center text-center p-3"
             style={{ background: "#C8860A" }}
           >
-            <p style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: "1.1rem", color: "#FBF8F4", lineHeight: 1.2 }}>Ketan Desai</p>
-            <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, fontSize: "0.6rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "#FBF8F4", marginTop: "4px" }}>Owner &amp; Craft Director</p>
+            <p style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: "#FBF8F4", lineHeight: 1.2 }} className="text-sm sm:text-base">Ketan Desai</p>
+            <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, letterSpacing: "0.12em", textTransform: "uppercase", color: "#FBF8F4", marginTop: "4px" }} className="text-[9px] sm:text-[10px] md:text-xs">Owner &amp; Craft Director</p>
           </div>
         </div>
 
