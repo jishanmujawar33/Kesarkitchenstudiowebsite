@@ -1,0 +1,155 @@
+import { useState } from "react";
+import { MapPin, Phone, Mail, CheckCircle, MessageCircle } from "lucide-react";
+
+export function Contact() {
+  const [submitted, setSubmitted] = useState(false);
+  const [form, setForm] = useState({ name: "", phone: "", area: "", type: "", message: "" });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubmitted(true);
+  };
+
+  return (
+    <section id="contact" className="bg-[#EDE5D8] py-24 px-6 lg:px-10">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
+        {/* Info */}
+        <div>
+          <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, fontSize: "0.72rem", letterSpacing: "0.22em", textTransform: "uppercase", color: "#C8860A" }} className="mb-4">
+            Get in Touch
+          </p>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 600, fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)", color: "#1C1410", lineHeight: 1.2 }} className="mb-6">
+            Start Your Project with Ketan
+          </h2>
+          <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, fontSize: "0.975rem", color: "#7A6854", lineHeight: 1.85 }} className="mb-10">
+            Tell us about your space and we'll arrange a free site visit. Ketan Desai personally oversees every enquiry — you'll speak to the craft director, not a sales agent.
+          </p>
+
+          <div className="flex flex-col gap-6">
+            {[
+              { icon: MapPin, label: "Studio & Workshop", value: "Vasai West, Palghar District, Maharashtra" },
+              { icon: Phone, label: "Call Ketan Desai", value: "+91 98XXX XXXXX" },
+              { icon: Mail, label: "Email Us", value: "ketan@kesarkitchenstudio.in" },
+            ].map(({ icon: Icon, label, value }) => (
+              <div key={label} className="flex gap-4 items-start">
+                <div className="w-10 h-10 flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background: "#C8860A" }}>
+                  <Icon size={16} color="#FBF8F4" />
+                </div>
+                <div>
+                  <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, fontSize: "0.7rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "#7A6854" }}>{label}</p>
+                  <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 400, fontSize: "0.9rem", color: "#1C1410", marginTop: "2px" }}>{value}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* WhatsApp CTA */}
+          <a
+            href="https://wa.me/91XXXXXXXXXX"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 mt-8 px-6 py-3 transition-all duration-200 hover:bg-[#1a8a3c]"
+            style={{ background: "#25D366", color: "#fff", fontFamily: "'DM Sans', sans-serif", fontWeight: 500, fontSize: "0.82rem", letterSpacing: "0.06em" }}
+          >
+            <MessageCircle size={16} />
+            Chat on WhatsApp
+          </a>
+
+          <div className="mt-10">
+            <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, fontSize: "0.7rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "#7A6854" }} className="mb-2">
+              Service Areas
+            </p>
+            <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 400, fontSize: "0.875rem", color: "#1C1410" }}>
+              Vasai West · Vasai East · Virar · Nalasopara · Nala Sopara · Bhayandar · Mira Road · Palghar
+            </p>
+          </div>
+        </div>
+
+        {/* Form */}
+        <div className="bg-[#FBF8F4] p-8 lg:p-10 border border-[#2C1A0E]/10">
+          {submitted ? (
+            <div className="h-full flex flex-col items-center justify-center text-center gap-4 py-16">
+              <CheckCircle size={44} color="#C8860A" />
+              <h3 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 600, fontSize: "1.5rem", color: "#1C1410" }}>Enquiry Received!</h3>
+              <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, fontSize: "0.95rem", color: "#7A6854", lineHeight: 1.75 }}>
+                Thank you. Ketan will personally reach out within one business day to schedule a free site visit at your home.
+              </p>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+              <div>
+                <h3 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 600, fontSize: "1.35rem", color: "#1C1410" }}>
+                  Free Site Visit & Estimate
+                </h3>
+                <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, fontSize: "0.82rem", color: "#7A6854", marginTop: "4px" }}>No obligations. Ketan visits, measures, and advises — free of charge.</p>
+              </div>
+
+              {[
+                { id: "name", label: "Full Name", placeholder: "Priya Shah", type: "text" },
+                { id: "phone", label: "Phone / WhatsApp", placeholder: "+91 98765 43210", type: "tel" },
+                { id: "area", label: "Area / Society Name", placeholder: "Vasai West, Acme Colony", type: "text" },
+              ].map(({ id, label, placeholder, type }) => (
+                <div key={id}>
+                  <label style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 400, fontSize: "0.78rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "#7A6854", display: "block", marginBottom: "6px" }}>
+                    {label}
+                  </label>
+                  <input
+                    type={type}
+                    required
+                    placeholder={placeholder}
+                    value={form[id as keyof typeof form]}
+                    onChange={(e) => setForm({ ...form, [id]: e.target.value })}
+                    className="w-full px-4 py-3 border outline-none focus:border-[#C8860A] transition-colors duration-200"
+                    style={{ borderColor: "rgba(44,26,14,0.15)", background: "#F7F3ED", fontFamily: "'DM Sans', sans-serif", fontSize: "0.9rem", color: "#1C1410" }}
+                  />
+                </div>
+              ))}
+
+              <div>
+                <label style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 400, fontSize: "0.78rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "#7A6854", display: "block", marginBottom: "6px" }}>
+                  What Are You Looking For?
+                </label>
+                <select
+                  required
+                  value={form.type}
+                  onChange={(e) => setForm({ ...form, type: e.target.value })}
+                  className="w-full px-4 py-3 border outline-none focus:border-[#C8860A] transition-colors duration-200 appearance-none"
+                  style={{ borderColor: "rgba(44,26,14,0.15)", background: "#F7F3ED", fontFamily: "'DM Sans', sans-serif", fontSize: "0.9rem", color: form.type ? "#1C1410" : "#7A6854" }}
+                >
+                  <option value="" disabled>Select a product</option>
+                  <option value="kitchen">SS Modular Kitchen</option>
+                  <option value="door">Heavy S.S. Safety Door</option>
+                  <option value="wardrobe">Designer Wardrobe</option>
+                  <option value="furniture">SS Solid Furniture</option>
+                  <option value="multiple">Multiple Products</option>
+                </select>
+              </div>
+
+              <div>
+                <label style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 400, fontSize: "0.78rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "#7A6854", display: "block", marginBottom: "6px" }}>
+                  Tell Us More (Optional)
+                </label>
+                <textarea
+                  rows={3}
+                  placeholder="Kitchen size, flat type (1/2/3 BHK), budget range, or any specific requirements..."
+                  value={form.message}
+                  onChange={(e) => setForm({ ...form, message: e.target.value })}
+                  className="w-full px-4 py-3 border outline-none focus:border-[#C8860A] transition-colors duration-200 resize-none"
+                  style={{ borderColor: "rgba(44,26,14,0.15)", background: "#F7F3ED", fontFamily: "'DM Sans', sans-serif", fontSize: "0.9rem", color: "#1C1410" }}
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="w-full py-3.5 transition-all duration-200 hover:bg-[#C8860A] mt-2"
+                style={{ background: "#2C1A0E", color: "#F7F3ED", fontFamily: "'DM Sans', sans-serif", fontWeight: 500, fontSize: "0.82rem", letterSpacing: "0.1em", textTransform: "uppercase" }}
+              >
+                Book Free Site Visit
+              </button>
+            </form>
+          )}
+        </div>
+      </div>
+    </section>
+  );
+}
