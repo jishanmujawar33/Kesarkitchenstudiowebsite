@@ -34,7 +34,7 @@ export function Contact() {
             {[
               { icon: MapPin, label: "Studio & Workshop", value: "Shop No.7, Pushkar Apt Near Babola Chowki, Opp. D-Mart, Vasai West Palghar 401202" },
               { icon: Phone, label: "Call Ketan Desai", value: "+91 95490 16045", href: "tel:+919549016045" },
-              { icon: Mail, label: "Email Us", value: "ketan@kesarkitchenstudio.in" },
+              { icon: Mail, label: "Email Us", value: "khetaramdesai6@gmail.com", href: "mailto:khetaramdesai6@gmail.com" },
             ].map(({ icon: Icon, label, value, href }) => (
               <div key={label} className="flex gap-4 items-start">
                 <div className="w-10 h-10 flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background: "#C8860A" }}>
