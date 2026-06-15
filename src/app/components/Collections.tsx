@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 const collections = [
   {
     id: "kitchen",
-    label: "SS Modular Kitchens",
+    label: "Modular Kitchens",
     tab: "Kitchens",
     tag: "Most Popular",
     image: "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=800&h=600&fit=crop&auto=format",
