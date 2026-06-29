@@ -40,7 +40,7 @@ export function Footer() {
           {[
             {
               title: "Products",
-              links: ["SS Modular Kitchens", "Heavy S.S. Safety Doors", "Designer Wardrobes", "SS Solid Furniture", "Commercial Kitchens"],
+              links: ["Modular Kitchens", "Wardrobe", "TV Unit", "Safety Door", "S.S Trolley", "S.S Grill","S.S Ralling","Tendam Box" ],
             },
             {
               title: "Company",
@@ -48,7 +48,7 @@ export function Footer() {
             },
             {
               title: "Service Areas",
-              links: ["Vasai West", "Vasai East", "Virar", "Nalasopara", "Bhayandar", "Mira Road", "Palghar"],
+              links: ["Dadar","Andheri","Malad", "Kandivali","Borivali","Vasai West", "Vasai East", "Virar", "Nalasopara", "Bhayandar", "Mira Road", "Palghar"],
             },
           ].map(({ title, links }) => (
             <div key={title}>
