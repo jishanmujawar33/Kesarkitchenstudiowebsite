@@ -48,7 +48,7 @@ export function Footer() {
             },
             {
               title: "Service Areas",
-              links: ["Dadar","Andheri","Malad", "Kandivali","Borivali","Vasai West", "Vasai East", "Virar", "Nalasopara", "Bhayandar", "Mira Road", "Palghar"],
+              links: ["Dadar","Andheri","Malad","Kandivali","Borivali","Bhayandar","Mira Road","Vasai West","Vasai East","Nalasopara","Virar","Palghar"],
             },
           ].map(({ title, links }) => (
             <div key={title}>
