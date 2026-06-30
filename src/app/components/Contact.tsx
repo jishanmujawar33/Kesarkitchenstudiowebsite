@@ -89,7 +89,7 @@ export function Contact() {
               Service Areas
             </p>
             <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 400, fontSize: "0.875rem", color: "#1C1410" }}>
-              Vasai West · Vasai East · Virar · Nalasopara · Nala Sopara · Bhayandar · Mira Road · Palghar
+              Dadar · Andheri · Malad · Kandivali · Borivali · Vasai West · Vasai East · Virar · Nalasopara · Nala Sopara · Bhayandar · Mira Road · Palghar
             </p>
           </div>
         </div>
